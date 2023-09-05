@@ -1,0 +1,77 @@
+  GNU nano 4.9.3                    taskNatalia.sh                              
+echo "Welcome to terminal $name"
+ 
+ 
+mkdir -p /tmp/test
+# touch /tmp/test/mydate.txt
+date '+%T' >> /tmp/test/mydate.txt
+echo "Homework_script every 15 min"
+ 
+     for i in {1..10}
+     do
+     echo $1
+     sleep 15
+     done
+ 
+echo "Data saved. Continue wor"
+df -h >> /tmp/test/mydate.txt
+mkdir -p /opt/mydate
+cp /tmp/test/mydate.txt /opt/mydate/newmydate.txt
+ 
+     for y in {1..5}
+     do
+     echo $y
+     sleep 1
+     done
+ 
+echo "Good"
+
+ 
+localhost:~# chmod 744 taskNatalia.sh
+localhost:~# ls -l
+total 20
+-rw-r--r--    1 root     root           114 Jul  5  2020 bench.py
+-rw-r--r--    1 root     root            76 Jul  3  2020 hello.c
+-rw-r--r--    1 root     root            22 Jun 26  2020 hello.js
+-rw-r--r--    1 root     root           151 Jul  5  2020 readme.txt
+-rwxr--r--    1 root     root           506 Sep  5 15:28 taskNatalia.sh
+localhost:~# env
+SHLVL=3
+HOME=/root
+OLDPWD=/
+PAGER=less
+PS1=\h:\w\$
+TERM=linux
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+PWD=/root
+TZ=UTC-02:00
+localhost:~# mv /root/taskNatalia.sh /bin/Natalia
+localhost:~# cd
+localhost:~# ls -l
+total 16
+-rw-r--r--    1 root     root           114 Jul  5  2020 bench.py
+-rw-r--r--    1 root     root            76 Jul  3  2020 hello.c
+-rw-r--r--    1 root     root            22 Jun 26  2020 hello.js
+-rw-r--r--    1 root     root           151 Jul  5  2020 readme.txt
+localhost:~# Natalia
+Hello World!
+
+Enter your name Natalia
+Welcome to terminal Natalia
+Homework_script every 15 min
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+# do daily/weekly/monthly maintenance
+# min   hour    day     month   weekday command
+*/15    *       *       *       *       run-parts /etc/periodic/15min
+0       *       *       *       *       run-parts /etc/periodic/hourly
+0       2       *       *       *       run-parts /etc/periodic/daily
+0       3       *       *       6       run-parts /etc/periodic/weekly
+0       5       1       *       *       run-parts /etc/periodic/monthly
+ 
